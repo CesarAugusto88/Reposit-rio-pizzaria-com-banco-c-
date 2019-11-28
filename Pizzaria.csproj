@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1E720705-CDFF-438C-9C18-00B7E69D3B8A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Pizzaria</RootNamespace>
+    <AssemblyName>Pizzaria</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Banco_PizzariaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Banco_PizzariaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controle\ControleEndereco.cs" />
+    <Compile Include="Controle\ControleFuncionario.cs" />
+    <Compile Include="Controle\ControleLogin.cs" />
+    <Compile Include="Controle\ControlePizza.cs" />
+    <Compile Include="Modelo\Cliente.cs" />
+    <Compile Include="Modelo\ClienteDAO.cs" />
+    <Compile Include="Modelo\Conexao.cs" />
+    <Compile Include="Controle\ControleCliente.cs" />
+    <Compile Include="Modelo\Endereco.cs" />
+    <Compile Include="Modelo\EnderecoDAO.cs" />
+    <Compile Include="Modelo\Funcionario.cs" />
+    <Compile Include="Modelo\FuncionarioDAO.cs" />
+    <Compile Include="Modelo\LoginDAOComandos.cs" />
+    <Compile Include="Modelo\Pizza.cs" />
+    <Compile Include="Modelo\PizzaDAO.cs" />
+    <Compile Include="Visao\FormAbrirCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\FormAbrirCaixa.Designer.cs">
+      <DependentUpon>FormAbrirCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\FormEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\FormEstoque.Designer.cs">
+      <DependentUpon>FormEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\FormBemVindo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\FormBemVindo.Designer.cs">
+      <DependentUpon>FormBemVindo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\FormCadastrarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\FormCadastrarFuncionario.Designer.cs">
+      <DependentUpon>FormCadastrarFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\FormEstoqueBebidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\FormEstoqueBebidas.Designer.cs">
+      <DependentUpon>FormEstoqueBebidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\FormEstoqueIngredientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\FormEstoqueIngredientes.Designer.cs">
+      <DependentUpon>FormEstoqueIngredientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\FormEstoqueLimpeza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\FormEstoqueLimpeza.Designer.cs">
+      <DependentUpon>FormEstoqueLimpeza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\FormFazerPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\FormFazerPedido.Designer.cs">
+      <DependentUpon>FormFazerPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\FormFecharCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\FormFecharCaixa.Designer.cs">
+      <DependentUpon>FormFecharCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Visao\FormCadastrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\FormCadastrarCliente.Designer.cs">
+      <DependentUpon>FormCadastrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\FormCadastrarPizza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\FormCadastrarPizza.Designer.cs">
+      <DependentUpon>FormCadastrarPizza.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Visao\FormEstoque.resx">
+      <DependentUpon>FormEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\FormBemVindo.resx">
+      <DependentUpon>FormBemVindo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\FormCadastrarCliente.resx">
+      <DependentUpon>FormCadastrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\FormCadastrarFuncionario.resx">
+      <DependentUpon>FormCadastrarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\FormCadastrarPizza.resx">
+      <DependentUpon>FormCadastrarPizza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\FormEstoqueBebidas.resx">
+      <DependentUpon>FormEstoqueBebidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\FormEstoqueIngredientes.resx">
+      <DependentUpon>FormEstoqueIngredientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\FormEstoqueLimpeza.resx">
+      <DependentUpon>FormEstoqueLimpeza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\FormFazerPedido.resx">
+      <DependentUpon>FormFazerPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Banco_PizzariaDataSet.xsc">
+      <DependentUpon>Banco_PizzariaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Banco_PizzariaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Banco_PizzariaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Banco_PizzariaDataSet.xss">
+      <DependentUpon>Banco_PizzariaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
